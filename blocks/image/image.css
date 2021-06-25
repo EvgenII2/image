@@ -3,4 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 818px;
+    height: 547px;
 }

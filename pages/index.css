@@ -11,3 +11,5 @@
 @import url(../blocks/image/image.css);
 @import url(../blocks/image/_location/image_location_over.css);
 @import url(../blocks/image/_location/image_location_under.css);
+
+@import url(../blocks/separation-line/separation-line.css);

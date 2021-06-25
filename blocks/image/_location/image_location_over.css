@@ -1,4 +1,9 @@
 .image_location_over {
     z-index: 1;
     position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../../../images/image-summer.jpg');
+    width: 0;
+    height: 100%;
 }
