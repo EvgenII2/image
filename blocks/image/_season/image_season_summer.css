@@ -1,9 +1,11 @@
-.image_location_over {
+.image_season_summer {
     z-index: 1;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     background-image: url('../../../images/image-summer.jpg');
-    width: 0;
+    background-position-x: right;
+    background-position-y: top;
+    width: 100%;
     height: 100%;
 }

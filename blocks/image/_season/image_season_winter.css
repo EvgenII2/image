@@ -1,0 +1,11 @@
+.image_season_winter {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('../../../images/image-winter.jpg');
+    background-position-x: right;
+    background-position-y: bottom;
+    width: 100;
+    height: 100%;
+}

@@ -1,0 +1,11 @@
+.image_season_autumn {
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../../../images/image-autumn.jpg');
+    background-position-x: left;
+    background-position-y: top;
+    width: 100%;
+    height: 100%;
+}

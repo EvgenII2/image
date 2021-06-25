@@ -1,11 +1,15 @@
-const separationLine = document.querySelector('.separation-line');
+const separationLineVert = document.querySelector('.separation-line_direction_vertical');
+const separationLineHor = document.querySelector('.separation-line_direction_horizontal');
 const image = document.querySelector('.image');
-const imageUnder = document.querySelector('.image_location_over');
+const imageSummer = document.querySelector('.image_season_summer');
+const imageWinter = document.querySelector('.image_season_winter');
+const imageSpring = document.querySelector('.image_season_spring');
+const imageAutumn = document.querySelector('.image_season_autumn');
 
-separationLine.onmousedown = function (event) {
+separationLineVert.onmousedown = function (event) {
     event.preventDefault();
 
-    let shiftX = event.clientX - separationLine.getBoundingClientRect().left;
+    let shiftX = event.clientX - separationLineVert.getBoundingClientRect().left;
 
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
@@ -15,12 +19,15 @@ separationLine.onmousedown = function (event) {
         if (newLeft < 0) {
             newLeft = 0;
         }
-        let rightEdge = image.offsetWidth - separationLine.offsetWidth;
+        let rightEdge = image.offsetWidth - separationLineVert.offsetWidth;
         if (newLeft > rightEdge) {
             newLeft = rightEdge;
         }
-        imageUnder.style.width = newLeft + 'px';
-        separationLine.style.left = newLeft + 'px';
+        imageSpring.style.width = newLeft + 'px';
+        imageWinter.style.width = image.offsetWidth - newLeft + 'px';
+        imageAutumn.style.width = newLeft + 'px';
+        imageSummer.style.width = image.offsetWidth - newLeft + 'px';
+        separationLineVert.style.left = newLeft + 'px';
     }
 
     function onMouseUp() {
@@ -29,7 +36,33 @@ separationLine.onmousedown = function (event) {
     }
 
 };
+separationLineHor.onmousedown = function (event) {
+    event.preventDefault();
 
-// separationLine.ondragstart = function () {
-//     return false;
-// };
+    let shiftY = event.clientY - separationLineHor.getBoundingClientRect().top;
+
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+
+    function onMouseMove(event) {
+        let newTop = event.clientY - shiftY - image.getBoundingClientRect().top;
+        if (newTop < 0) {
+            newTop = 0;
+        }
+        let rightEdge = image.clientHeight - separationLineHor.clientHeight;
+        if (newTop > rightEdge) {
+            newTop = rightEdge;
+        }
+
+        imageAutumn.style.height = newTop + 'px';
+        imageSpring.style.height = image.clientHeight - newTop + 'px';
+        imageSummer.style.height = newTop + 'px';
+        imageWinter.style.height = image.clientHeight - newTop + 'px';
+        separationLineHor.style.top = newTop + 'px';
+    }
+    function onMouseUp() {
+        document.removeEventListener('mouseup', onMouseUp);
+        document.removeEventListener('mousemove', onMouseMove);
+    }
+
+};
