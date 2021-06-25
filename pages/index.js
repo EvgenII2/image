@@ -49,9 +49,9 @@ separationLineHor.onmousedown = function (event) {
         if (newTop < 0) {
             newTop = 0;
         }
-        let rightEdge = image.clientHeight - separationLineHor.clientHeight;
-        if (newTop > rightEdge) {
-            newTop = rightEdge;
+        let bottomEdge = image.clientHeight - separationLineHor.clientHeight;
+        if (newTop > bottomEdge) {
+            newTop = bottomEdge;
         }
 
         imageAutumn.style.height = newTop + 'px';
