@@ -6,9 +6,9 @@ When lines move, picture change
 Изменение видимой части картинок при перемещении линий.
 
 ## Технологии
-*html
-*css
-*javascript
+* html
+* css
+* javascript
 
 ## TODO
 Adaptive version. Increase lines.
