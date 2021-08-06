@@ -13,5 +13,14 @@ When lines move, picture change
 ## TODO
 Adaptive version. Increase lines.
 
-## Website
+## Как использовать
+
+Для ознакомления посетите сайт:
 https://evgenii2.github.io/image/
+
+## Запуск рабочей сборки
+1. Скачайте проект
+2. Разместите в корне сервера.
+3. Откройте по адресу сервера
+
+Работосопособность проверена в Google Chrome.
